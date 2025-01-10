@@ -74,16 +74,16 @@ exit
 ```
 
 # Node-RED Demo
-Install `node-red-contrib-postgresql` under `Manage palette`
-Import the `flows.json` from the `demos/` directory. This demo showcases:
-
-1. Communicating with Mosquitto using container names.
-2. Interfacing with PostgreSQL for:
- - Creating tables.
- - Populating times-eries data.
- - Retrieving data for analysis.
+Under `Manage palette`, Install `node-red-contrib-postgresql`.
+Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. enter the following information under `Security`
+- Username: `mqtt_user1`
+- Password: `P71X95tQ!]tm`
 
 # Grafana Dashboard
- - Import the `dashboard-demo.json` from the `demos/` directory into Grafana.
- - Configure Grafana to connect to the PostgreSQL database.
+ - Under `Data sources`, add PostgreSQL with the following information.
+   - Host URL: `digitalisation-aio-package-postgres-1:5432`
+   - Database name: `postgres`
+   - Username: `postgres`
+   - Password: `05JD£AEBW2'f`
+ - Import the `dashboard-demo.json` from the `grafana-data/` directory into Grafana.
  - Explore visualisations and analytics for time-series data.
