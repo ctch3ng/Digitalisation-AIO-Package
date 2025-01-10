@@ -71,7 +71,7 @@ exit
 
 # Node-RED Demo
 Install `node-red-contrib-postgresql` under `Manage palette`
-Import the `flows.json` from the `demo/` directory. This demo showcases:
+Import the `flows.json` from the `demos/` directory. This demo showcases:
 
 1. Communicating with Mosquitto using container names.
 2. Interfacing with PostgreSQL for:
@@ -80,6 +80,6 @@ Import the `flows.json` from the `demo/` directory. This demo showcases:
  - Retrieving data for analysis.
 
 # Grafana Dashboard
- - Import the `dashboard-demo.json` from the `demo/` directory into Grafana.
+ - Import the `dashboard-demo.json` from the `demos/` directory into Grafana.
  - Configure Grafana to connect to the PostgreSQL database.
  - Explore visualisations and analytics for time-series data.
