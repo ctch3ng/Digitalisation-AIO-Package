@@ -47,7 +47,7 @@ docker compose up -d
 - Node-RED: [http://localhost:1880](http://localhost:1880)
 - Grafana: [http://localhost:3000](http://localhost:3000)
 
-5. Updating Mosquitto's credentials
+5. Updating Mosquitto's credentials (Optional)
 - Enter the Mosquitto container:
 ```bash
 docker exec -it digitalisation-aio-mosquitto sh
