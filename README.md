@@ -27,7 +27,7 @@ The **Digitalisation AIO (All-In-One) Package** is a comprehensive Docker-based 
 
 ### Setup Steps
 1. Clone this repository, and update ownership.
-```
+```bash
 git clone https://github.com/ctch3ng/Digitalisation-AIO-Package.git
 sudo chown -R 1000:1000 Digitalisation-AIO-Package/
 ```
@@ -35,7 +35,7 @@ sudo chown -R 1000:1000 Digitalisation-AIO-Package/
 - Set your PostgreSQL password. The default password is `05JD£AEBW2'f`.
 - Define Grafana admin credentials. The default username and password are `admin` and `0m{-}>7nP8)C`, respectively. 
 3. Launch the stack:
-```
+```bash
 docker-compose up -d
 ```
 4. Access the services:
