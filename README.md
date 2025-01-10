@@ -4,7 +4,7 @@ The **Digitalisation AIO (All-In-One) Package** is a comprehensive Docker-based 
 
 ## Components
 - **Node-RED**: Automates workflows and orchestrates communication.
-- **PostgreSQL**: Manages and stores timeseries data.
+- **PostgreSQL**: Manages and stores time-series data.
 - **Mosquitto**: Enables MQTT-based messaging between services.
 - **Grafana**: Provides data visualisation and analytics.
 
@@ -49,7 +49,7 @@ docker exec -it digitalisation-aio-mosquitto sh
 ```bash
 cd /mosquitto/config
 ```
-- Update the password file:
+- Update the password file (Here, the default username and password are `mqtt_user1` and `P71X95tQ!]tm`:
 ```bash
 rm passwordfile
 echo "mqtt_user1:P71X95tQ!]tm" > passwordfile
@@ -63,3 +63,17 @@ mosquitto_passwd -U passwordfile
 ```bash
 exit
 ```
+
+# Node-RED Demo
+Import the `flows.json` from the `node-red-data/` directory. This demo showcases:
+
+1. Communicating with Mosquitto using container names.
+2. Interfacing with PostgreSQL for:
+ - Creating tables.
+ - Populating times-eries data.
+ - Retrieving data for analysis.
+
+# Grafana Dashboard
+ - Import the `dashboard-template.json` from the `grafana-data/` directory into Grafana.
+ - Configure Grafana to connect to the PostgreSQL database.
+ - Explore visualisations and analytics for time-series data.
