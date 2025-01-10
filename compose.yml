@@ -11,7 +11,7 @@ services:
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD
     volumes: 
       - "./postgres-16-data:/var/lib/postgresql/data"
-      - "./postgres-home:/home"
+#      - "./postgres-home:/home"
     networks:
       - digi_pkg
   
