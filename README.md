@@ -87,5 +87,6 @@ Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. en
    - Password: `05JD£AEBW2'f`
    - TLS/SSL Mode: `disable`
    - TimescaleDB: `enable`
- - Import the `Dashboard Demo.json` from the `grafana-data/` directory into Grafana via Dashboards -> Import. Select `grafana-postgresql-datasource` as the source.
+ - Import the `Dashboard Demo.json` from the `grafana-data/` directory into Grafana via Dashboards -> Import. 
+ - Edit `Sensor 1` and `Sensor 2` panels. Select `grafana-postgresql-datasource` as the source.
  - Explore visualisations and analytics for time-series data.
