@@ -27,9 +27,9 @@ The **Digitalisation AIO (All-In-One) Package** is a comprehensive Docker-based 
 
 ### Setup Steps
 1. Clone this repository.
-2. Configure the `.env` file with your preferred credentials.
-- Set your PostgreSQL password.
-- Define Grafana admin credentials.
+2. Configure the `.env` file with your preferred credentials. (You can skip this if you just want to give it a test drive)
+- Set your PostgreSQL password. The default password is `05JD£AEBW2'f`.
+- Define Grafana admin credentials. The default username and password are `admin` and `0m{-}>7nP8)C`, respectively. 
 3. Launch the stack:
 ```
 docker-compose up -d
@@ -37,3 +37,29 @@ docker-compose up -d
 4. Access the services:
 - Node-RED: [http://localhost:1880](http://localhost:1880)
 - Grafana: [http://localhost:3000](http://localhost:3000)
+
+5. Updating Mosquitto's credentials
+- Enter the Mosquitto container:
+```bash
+docker exec -it digitalisation-aio-mosquitto sh
+```
+  (Use `docker ps` to confirm the container name. Here, the name in the example is `digitalisation-aio-mosquitto`)
+
+- Navigate to the password file directory:
+```bash
+cd /mosquitto/config
+```
+- Update the password file:
+```bash
+rm passwordfile
+echo "mqtt_user1:P71X95tQ!]tm" > passwordfile
+chmod 0700 passwordfile
+```
+- Hash the password file:
+```bash
+mosquitto_passwd -U passwordfile
+```
+- Exit the container:
+```bash
+exit
+```
