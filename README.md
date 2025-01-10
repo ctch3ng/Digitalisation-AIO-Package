@@ -26,7 +26,11 @@ The **Digitalisation AIO (All-In-One) Package** is a comprehensive Docker-based 
 2. Docker Desktop should be linked to your WSL2 instance.
 
 ### Setup Steps
-1. Clone this repository.
+1. Clone this repository, and update ownership.
+```
+git clone https://github.com/ctch3ng/Digitalisation-AIO-Package.git
+sudo chown -R 1000:1000 Digitalisation-AIO-Package/
+```
 2. Configure the `.env` file with your preferred credentials. (You can skip this if you just want to give it a test drive)
 - Set your PostgreSQL password. The default password is `05JD£AEBW2'f`.
 - Define Grafana admin credentials. The default username and password are `admin` and `0m{-}>7nP8)C`, respectively. 
