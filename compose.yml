@@ -42,9 +42,11 @@ services:
     image: grafana/grafana-oss
     user: "1000:1000"
     restart: unless-stopped
-#    environment:
+    environment:
       # increases the log level from info to debug
       #- GF_LOG_LEVEL=debug
+      - GF_SECURITY_ADMIN_USER: $GRAFANA_USER
+      - GF_SECURITY_ADMIN_PASSWORD: $GRAFANA_PASSWORD
     ports:
       - '3000:3000'
     volumes:
