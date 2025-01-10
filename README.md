@@ -52,7 +52,7 @@ docker compose up -d
 ```bash
 docker exec -it digitalisation-aio-mosquitto sh
 ```
-  (Use `docker ps` to confirm the container name. Here, the name in the example is `digitalisation-aio-mosquitto`)
+  - (Use `docker ps` to confirm the container name. Here, the name in the example is `digitalisation-aio-mosquitto`)
 
 - Navigate to the password file directory:
 ```bash
