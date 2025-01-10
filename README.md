@@ -29,6 +29,8 @@ The **Digitalisation AIO (All-In-One) Package** is a comprehensive Docker-based 
 1. Clone this repository, and update ownership.
 ```bash
 git clone https://github.com/ctch3ng/Digitalisation-AIO-Package.git
+```
+```bash
 sudo chown -R 1000:1000 Digitalisation-AIO-Package/
 ```
 2. Configure the `.env` file with your preferred credentials. (You can skip this if you just want to give it a test drive)
@@ -37,6 +39,8 @@ sudo chown -R 1000:1000 Digitalisation-AIO-Package/
 3. Launch the stack:
 ```bash
 cd Digitalisation-AIO-Package/
+```
+```bash
 docker compose up -d
 ```
 4. Access the services:
