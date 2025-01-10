@@ -79,7 +79,7 @@ Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. en
 - Username: `mqtt_user1`
 - Password: `P71X95tQ!]tm`
 
-# Grafana Dashboard
+# Grafana Dashboard Demo
  - Under `Data sources`, add PostgreSQL with the following information.
    - Host URL: `digitalisation-aio-package-postgres-1:5432`
    - Database name: `postgres`
@@ -89,4 +89,3 @@ Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. en
    - TimescaleDB: `enable`
  - Import the `Dashboard Demo.json` from the `grafana-data/` directory into Grafana via Dashboards -> Import. 
  - Edit `Sensor 1` and `Sensor 2` panels. Select `grafana-postgresql-datasource` as the source.
- - Explore visualisations and analytics for time-series data.
