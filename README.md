@@ -47,7 +47,7 @@ docker compose up -d
 - Node-RED: [http://localhost:1880](http://localhost:1880)
 - Grafana: [http://localhost:3000](http://localhost:3000)
 
-5. Updating Mosquitto's credentials (Optional)
+5. Updating Mosquitto's credentials (Again, you can skip this if you just want to give it a test drive)
 - Enter the Mosquitto container:
 ```bash
 docker exec -it digitalisation-aio-mosquitto sh
@@ -58,7 +58,7 @@ docker exec -it digitalisation-aio-mosquitto sh
 ```bash
 cd /mosquitto/config
 ```
-- Update the password file (Here, the default username and password are `mqtt_user1` and `P71X95tQ!]tm`:
+- Update the password file (Here, the default username and password are `mqtt_user1` and `P71X95tQ!]tm`, respectively):
 ```bash
 rm passwordfile
 echo "mqtt_user1:P71X95tQ!]tm" > passwordfile
