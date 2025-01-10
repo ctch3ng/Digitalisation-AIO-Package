@@ -1,0 +1,784 @@
+[
+    {
+        "id": "29a92b2b2cca5fd8",
+        "type": "tab",
+        "label": "MQTT Demo",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5e1377eabaa1b34b",
+        "type": "tab",
+        "label": "PostgreSQL Demo",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b9c564bc644d43cb",
+        "type": "tab",
+        "label": "Grafana Demo",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "052aec521515b111",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "digi_pkg-mosquitto-1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fbd14997310e037a",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "digi_pkg-postgres-1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "postgres",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "05JD£AEBW2'f",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "d9b084b935ad0517",
+        "type": "inject",
+        "z": "29a92b2b2cca5fd8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "L1/L2/L3",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "04168769110e0757"
+            ]
+        ]
+    },
+    {
+        "id": "04168769110e0757",
+        "type": "mqtt out",
+        "z": "29a92b2b2cca5fd8",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "052aec521515b111",
+        "x": 350,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e99c74958498335f",
+        "type": "mqtt in",
+        "z": "29a92b2b2cca5fd8",
+        "name": "",
+        "topic": "L1/L2/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "052aec521515b111",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "55b67ac4ada00c76"
+            ]
+        ]
+    },
+    {
+        "id": "55b67ac4ada00c76",
+        "type": "debug",
+        "z": "29a92b2b2cca5fd8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "683892973307683f",
+        "type": "comment",
+        "z": "29a92b2b2cca5fd8",
+        "name": "Server Configuration",
+        "info": "Since containers are connected via \nthe virtual network \"digi_pkg\" under \nthe same stack, they can reach each other \nusing their container name. In this case, the \nname of the Mosquitto container is \n\"digi_pkg-mosquitto-1\".",
+        "x": 110,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "bc4997e5bad876e1",
+        "type": "inject",
+        "z": "5e1377eabaa1b34b",
+        "name": "Insert Data - Trigger",
+        "props": [
+            {
+                "p": "name",
+                "v": "'chen3ng'",
+                "vt": "str"
+            },
+            {
+                "p": "position",
+                "v": "'Developer'",
+                "vt": "str"
+            },
+            {
+                "p": "salary",
+                "v": "999999",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "9b504da562ef82cc"
+            ]
+        ]
+    },
+    {
+        "id": "7017e225d7ef38b9",
+        "type": "inject",
+        "z": "5e1377eabaa1b34b",
+        "name": "Create Table - Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "85a089f5ab8d6be3"
+            ]
+        ]
+    },
+    {
+        "id": "84e3b80b37dc6b24",
+        "type": "debug",
+        "z": "5e1377eabaa1b34b",
+        "name": "Show Debug Message",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "83d985663ab05b43",
+        "type": "function",
+        "z": "5e1377eabaa1b34b",
+        "name": "Splitting the Data",
+        "func": "let data = msg.payload.trim().split(\",\");\nmsg.rpm = parseFloat(data[1]);\nmsg.materiallength = parseFloat(data[2]);\nmsg.uptime = parseFloat(data[3]);\nmsg.utilisation = parseFloat(data[4]);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 360,
+        "wires": [
+            [
+                "4ccdec88fae093b0",
+                "d41960ef68905d09"
+            ]
+        ]
+    },
+    {
+        "id": "23d6d61d99dbcab4",
+        "type": "inject",
+        "z": "5e1377eabaa1b34b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "'0, 1, 2, 3, 4' ",
+        "payloadType": "str",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "83d985663ab05b43",
+                "50434e54ab3120ea"
+            ]
+        ]
+    },
+    {
+        "id": "4ccdec88fae093b0",
+        "type": "debug",
+        "z": "5e1377eabaa1b34b",
+        "name": "AFTER TRIMMED",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "50434e54ab3120ea",
+        "type": "debug",
+        "z": "5e1377eabaa1b34b",
+        "name": "RAW DATA",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "6d62311e48933326",
+        "type": "inject",
+        "z": "5e1377eabaa1b34b",
+        "name": "Create Table - Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "edd33a0847cbc192"
+            ]
+        ]
+    },
+    {
+        "id": "951f78ec830c27e9",
+        "type": "comment",
+        "z": "5e1377eabaa1b34b",
+        "name": "Example 1: Employee Datebase",
+        "info": "Example 1: Employee Datebase",
+        "x": 170,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "5d574ed6b1034fdd",
+        "type": "comment",
+        "z": "5e1377eabaa1b34b",
+        "name": "Example 2: Machine Database",
+        "info": "Example 2: Machine Database",
+        "x": 170,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9b504da562ef82cc",
+        "type": "postgresql",
+        "z": "5e1377eabaa1b34b",
+        "name": "",
+        "query": "INSERT INTO employees (name, position, salary)\nVALUES ({{{ msg.name }}}, {{{ msg.position }}}, {{{ msg.salary }}});",
+        "postgreSQLConfig": "fbd14997310e037a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "84e3b80b37dc6b24"
+            ]
+        ]
+    },
+    {
+        "id": "85a089f5ab8d6be3",
+        "type": "postgresql",
+        "z": "5e1377eabaa1b34b",
+        "name": "",
+        "query": "CREATE TABLE IF NOT EXISTS employees (\n    id SERIAL PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    position VARCHAR(50),\n    salary NUMERIC(10, 2)\n);",
+        "postgreSQLConfig": "fbd14997310e037a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 530,
+        "y": 80,
+        "wires": [
+            [
+                "84e3b80b37dc6b24"
+            ]
+        ]
+    },
+    {
+        "id": "d41960ef68905d09",
+        "type": "postgresql",
+        "z": "5e1377eabaa1b34b",
+        "name": "",
+        "query": "INSERT INTO machine_db (rpm,materiallength,uptime,utilisation)\nVALUES ({{{ msg.rpm }}},{{{ msg.materiallength }}},{{{ msg.uptime }}},{{{ msg.utilisation }}});",
+        "postgreSQLConfig": "fbd14997310e037a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "84e3b80b37dc6b24"
+            ]
+        ]
+    },
+    {
+        "id": "edd33a0847cbc192",
+        "type": "postgresql",
+        "z": "5e1377eabaa1b34b",
+        "name": "",
+        "query": "CREATE TABLE IF NOT EXISTS machine_db (\n    id SERIAL PRIMARY KEY,\n    rpm NUMERIC(10, 2),\n    materiallength NUMERIC(10, 2),\n    uptime NUMERIC(10, 2),\n    utilisation NUMERIC(10,2)\n);",
+        "postgreSQLConfig": "fbd14997310e037a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 550,
+        "y": 300,
+        "wires": [
+            [
+                "84e3b80b37dc6b24"
+            ]
+        ]
+    },
+    {
+        "id": "cb4da013403704ae",
+        "type": "inject",
+        "z": "5e1377eabaa1b34b",
+        "name": "Drop Table - Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "6c5bc8c69ac39c1d"
+            ]
+        ]
+    },
+    {
+        "id": "6c5bc8c69ac39c1d",
+        "type": "postgresql",
+        "z": "5e1377eabaa1b34b",
+        "name": "",
+        "query": "DROP TABLE IF EXISTS employees;",
+        "postgreSQLConfig": "fbd14997310e037a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 530,
+        "y": 200,
+        "wires": [
+            [
+                "84e3b80b37dc6b24"
+            ]
+        ]
+    },
+    {
+        "id": "0006d435c2af6447",
+        "type": "inject",
+        "z": "5e1377eabaa1b34b",
+        "name": "Drop Table - Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "f3f8edb134ec8d11"
+            ]
+        ]
+    },
+    {
+        "id": "f3f8edb134ec8d11",
+        "type": "postgresql",
+        "z": "5e1377eabaa1b34b",
+        "name": "",
+        "query": "DROP TABLE IF EXISTS machine_db;",
+        "postgreSQLConfig": "fbd14997310e037a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 550,
+        "y": 460,
+        "wires": [
+            [
+                "84e3b80b37dc6b24"
+            ]
+        ]
+    },
+    {
+        "id": "66f2da83d4eeed61",
+        "type": "inject",
+        "z": "b9c564bc644d43cb",
+        "name": "Create Tables - Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "156aa77d5afbc83c"
+            ]
+        ]
+    },
+    {
+        "id": "156aa77d5afbc83c",
+        "type": "postgresql",
+        "z": "b9c564bc644d43cb",
+        "name": "",
+        "query": "CREATE TABLE IF NOT EXISTS sensors(\n  id SERIAL PRIMARY KEY,\n  type VARCHAR(50),\n  location VARCHAR(50)\n);\n\nCREATE TABLE IF NOT EXISTS sensor_data (\n  time TIMESTAMPTZ NOT NULL,\n  sensor_id INTEGER,\n  temperature DOUBLE PRECISION,\n  cpu DOUBLE PRECISION,\n  FOREIGN KEY (sensor_id) REFERENCES sensors (id)\n);\n\nSELECT create_hypertable('sensor_data', 'time');",
+        "postgreSQLConfig": "fbd14997310e037a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 430,
+        "y": 80,
+        "wires": [
+            [
+                "bfdfc776a272e6ce"
+            ]
+        ]
+    },
+    {
+        "id": "bfdfc776a272e6ce",
+        "type": "debug",
+        "z": "b9c564bc644d43cb",
+        "name": "Show Debug Message",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7d5bfaf4c4f8321c",
+        "type": "inject",
+        "z": "b9c564bc644d43cb",
+        "name": "Prepare Sensors Table - Trigger",
+        "props": [
+            {
+                "p": "name",
+                "v": "'chen3ng'",
+                "vt": "str"
+            },
+            {
+                "p": "position",
+                "v": "'Developer'",
+                "vt": "str"
+            },
+            {
+                "p": "salary",
+                "v": "999999",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "87aa7fe553ae8bf7"
+            ]
+        ]
+    },
+    {
+        "id": "87aa7fe553ae8bf7",
+        "type": "postgresql",
+        "z": "b9c564bc644d43cb",
+        "name": "",
+        "query": "INSERT INTO sensors (type, location) VALUES\n('a','floor'),\n('a', 'ceiling'),\n('b','floor'),\n('b', 'ceiling');",
+        "postgreSQLConfig": "fbd14997310e037a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "bfdfc776a272e6ce"
+            ]
+        ]
+    },
+    {
+        "id": "14426ec3f486823a",
+        "type": "inject",
+        "z": "b9c564bc644d43cb",
+        "name": "Insert Data - Trigger",
+        "props": [
+            {
+                "p": "name",
+                "v": "'chen3ng'",
+                "vt": "str"
+            },
+            {
+                "p": "position",
+                "v": "'Developer'",
+                "vt": "str"
+            },
+            {
+                "p": "salary",
+                "v": "999999",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "04345e08b58822ad"
+            ]
+        ]
+    },
+    {
+        "id": "04345e08b58822ad",
+        "type": "postgresql",
+        "z": "b9c564bc644d43cb",
+        "name": "",
+        "query": "INSERT INTO sensor_data (time, sensor_id, cpu, temperature)\nSELECT\n  time,\n  sensor_id,\n  random() AS cpu,\n  random()*100 AS temperature\nFROM generate_series(now() - interval '24 hour', now(), interval '5 minute') AS g1(time), generate_series(1,4,1) AS g2(sensor_id);",
+        "postgreSQLConfig": "fbd14997310e037a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "bfdfc776a272e6ce"
+            ]
+        ]
+    },
+    {
+        "id": "2851b8508646346d",
+        "type": "comment",
+        "z": "b9c564bc644d43cb",
+        "name": "Reference",
+        "info": "This example is extracted from \n\nAjay Kulkarni, \"How to Simulate a Basic \nIoT Sensor Dataset on PostgreSQL\" on\nhttps://www.timescale.com/\n\nOriginally posted Dec 28, 2023\nLast updated Oct 17, 2024\n\nhttps://www.timescale.com/blog/how-to-explore-timescaledb-using-simulated-iot-sensor-data\n\n",
+        "x": 120,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "187e960cc1532643",
+        "type": "inject",
+        "z": "b9c564bc644d43cb",
+        "name": "Drop Tables - Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "93af135980ea2bd4"
+            ]
+        ]
+    },
+    {
+        "id": "93af135980ea2bd4",
+        "type": "postgresql",
+        "z": "b9c564bc644d43cb",
+        "name": "",
+        "query": "DROP TABLE IF EXISTS sensor_data;\nDROP TABLE IF EXISTS sensors;",
+        "postgreSQLConfig": "fbd14997310e037a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "bfdfc776a272e6ce"
+            ]
+        ]
+    }
+]
