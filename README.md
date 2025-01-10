@@ -85,5 +85,7 @@ Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. en
    - Database name: `postgres`
    - Username: `postgres`
    - Password: `05JD£AEBW2'f`
+   - TLS/SSL Mode: `disable`
+   - TimescaleDB: `enable`
  - Import the `dashboard-demo.json` from the `grafana-data/` directory into Grafana.
  - Explore visualisations and analytics for time-series data.
