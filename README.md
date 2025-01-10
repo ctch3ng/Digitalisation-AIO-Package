@@ -36,7 +36,7 @@ sudo chown -R 1000:1000 Digitalisation-AIO-Package/
 - Define Grafana admin credentials. The default username and password are `admin` and `0m{-}>7nP8)C`, respectively. 
 3. Launch the stack:
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 4. Access the services:
 - Node-RED: [http://localhost:1880](http://localhost:1880)
