@@ -47,7 +47,24 @@ docker compose up -d
 - Node-RED: [http://localhost:1880](http://localhost:1880)
 - Grafana: [http://localhost:3000](http://localhost:3000)
 
-5. Updating Mosquitto's credentials (Again, you can skip this if you just want to give it a test drive)
+# Node-RED Demo
+Under `Manage palette`, Install `node-red-contrib-postgresql`.
+Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. enter the following information under `Security`
+- Username: `mqtt_user1`
+- Password: `P71X95tQ!]tm`
+
+# Grafana Dashboard Demo
+ - Under `Data sources`, add PostgreSQL with the following information.
+   - Host URL: `digitalisation-aio-package-postgres-1:5432`
+   - Database name: `postgres`
+   - Username: `postgres`
+   - Password: `05JD£AEBW2'f`
+   - TLS/SSL Mode: `disable`
+   - TimescaleDB: `enable`
+ - Import the `Dashboard Demo.json` from the `grafana-data/` directory into Grafana via Dashboards -> Import. 
+ - Edit `Sensor 1` and `Sensor 2` panels. Select `grafana-postgresql-datasource` as the source.
+
+# [Optional] Updating Mosquitto's credentials (Again, you can skip this if you just want to give it a test drive)
 - Enter the Mosquitto container:
 ```bash
 docker exec -it digitalisation-aio-mosquitto sh
@@ -72,20 +89,3 @@ mosquitto_passwd -U passwordfile
 ```bash
 exit
 ```
-
-# Node-RED Demo
-Under `Manage palette`, Install `node-red-contrib-postgresql`.
-Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. enter the following information under `Security`
-- Username: `mqtt_user1`
-- Password: `P71X95tQ!]tm`
-
-# Grafana Dashboard Demo
- - Under `Data sources`, add PostgreSQL with the following information.
-   - Host URL: `digitalisation-aio-package-postgres-1:5432`
-   - Database name: `postgres`
-   - Username: `postgres`
-   - Password: `05JD£AEBW2'f`
-   - TLS/SSL Mode: `disable`
-   - TimescaleDB: `enable`
- - Import the `Dashboard Demo.json` from the `grafana-data/` directory into Grafana via Dashboards -> Import. 
- - Edit `Sensor 1` and `Sensor 2` panels. Select `grafana-postgresql-datasource` as the source.
