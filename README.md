@@ -34,7 +34,7 @@ git clone https://github.com/ctch3ng/Digitalisation-AIO-Package.git
 sudo chown -R 1000:1000 Digitalisation-AIO-Package/
 ```
 
-Note: for Mac user, use the following command instead
+Note: for Mac users, use the following command instead
 
 ```bash
 sudo chown -R 501:501 Digitalisation-AIO-Package/
