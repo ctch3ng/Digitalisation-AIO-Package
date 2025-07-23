@@ -48,7 +48,7 @@ sudo chown -R 501:501 Digitalisation-AIO-Package/
 cd Digitalisation-AIO-Package/
 ```
 ```bash
-docker compose up -d
+sudo docker compose up -d
 ```
 4. Access the services:
 - Node-RED: [http://localhost:1880](http://localhost:1880)
