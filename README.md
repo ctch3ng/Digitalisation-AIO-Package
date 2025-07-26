@@ -59,11 +59,12 @@ sudo docker compose up -d
 - OpenPLC Runtime: [http://localhost:8080](http://localhost:8080)
 
 # Node-RED Demo (Post-installation Configurations)
-Under `Manage palette`, Install 
+Under `Manage palette`, search and install the following modules.
   - `node-red-contrib-postgresql`
   - `node-red-dashboard`
   - `node-red-contrib-modbus`
   - `node-red-contrib-lfo`
+    
 Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. Enter the following information under `Security`
 - Username: `mqtt_user1`
 - Password: `P71X95tQ!]tm`
