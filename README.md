@@ -42,8 +42,10 @@ sudo chown -R 501:501 Digitalisation-AIO-Package/
 ```
 
 2. Configure the `.env` file with your preferred credentials. (You can skip this if you just want to give it a test drive)
-- Set your PostgreSQL password. The default password is `05JD£AEBW2'f`.
-- Define Grafana admin credentials. The default username and password are `admin` and `0m{-}>7nP8)C`, respectively. 
+- Set your PostgreSQL password.
+  - The default password is `05JD£AEBW2'f`.
+- Define Grafana admin credentials.
+  - The default username and password are `admin` and `0m{-}>7nP8)C`, respectively. 
 3. Launch the stack:
 ```bash
 cd Digitalisation-AIO-Package/
@@ -54,14 +56,19 @@ sudo docker compose up -d
 4. Access the services:
 - Node-RED: [http://localhost:1880](http://localhost:1880)
 - Grafana: [http://localhost:3000](http://localhost:3000)
+- OpenPLC Runtime: [http://localhost:8080](http://localhost:8080)
 
-# Node-RED Demo
-Under `Manage palette`, Install `node-red-contrib-postgresql`.
-Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. enter the following information under `Security`
+# Node-RED Demo (Post-installation Configurations)
+Under `Manage palette`, Install 
+  - `node-red-contrib-postgresql`
+  - `node-red-dashboard`
+  - `node-red-contrib-modbus`
+  - `node-red-contrib-lfo`
+Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. Enter the following information under `Security`
 - Username: `mqtt_user1`
 - Password: `P71X95tQ!]tm`
 
-# Grafana Dashboard Demo
+# Grafana Dashboard Demo (Post-installation Configurations)
  - Under `Data sources`, add PostgreSQL with the following information.
    - Host URL: `digitalisation-aio-package-postgres-1:5432`
    - Database name: `postgres`
