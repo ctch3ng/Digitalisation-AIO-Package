@@ -7,7 +7,7 @@ The **Digitalisation AIO (All-In-One) Package** is a comprehensive Docker-based 
 - **PostgreSQL**: Manages and stores time-series data.
 - **Mosquitto**: Enables MQTT-based messaging between services.
 - **Grafana**: Provides data visualisation and analytics.
-- **OpenPLC Runtime**: For running PLC programs (Modbus TCP/IP Enabled) - OpenPLC Editor needed to be downloaded and installed separately
+- **OpenPLC Runtime**: For running PLC programs (Modbus TCP/IP Enabled) - OpenPLC Editor needed to be downloaded and installed separately [https://autonomylogic.com/](https://autonomylogic.com/).
 
 ---
 
