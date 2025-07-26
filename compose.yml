@@ -53,3 +53,15 @@ services:
       - './grafana-data:/var/lib/grafana'
     networks:
       - digi_pkg
+
+ openplc-runtime:
+     image: ctch3ng/openplc-runtime:v3
+     ports:
+      - "8080:8080"
+      - "502:502"
+    restart: unless-stopped
+    networks:
+      - digi_pkg
+    privileged: true
+    stdin_open: true # Equivalent to -i
+    tty: true        # Equivalent to -t
