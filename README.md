@@ -58,7 +58,7 @@ sudo docker compose up -d
 - Grafana: [http://localhost:3000](http://localhost:3000)
 - OpenPLC Runtime: [http://localhost:8080](http://localhost:8080)
 
-# Node-RED Demo (Post-installation Configurations)
+# Node-RED Demo (Post-installation Steps)
 Under `Manage palette`, search and install the following modules.
   - `node-red-contrib-postgresql`
   - `node-red-dashboard`
@@ -69,7 +69,7 @@ Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. En
 - Username: `mqtt_user1`
 - Password: `P71X95tQ!]tm`
 
-# Grafana Dashboard Demo (Post-installation Configurations)
+# Grafana Dashboard Demo (Post-installation Steps)
  - Under `Data sources`, add PostgreSQL with the following information.
    - Host URL: `digitalisation-aio-package-postgres-1:5432`
    - Database name: `postgres`
