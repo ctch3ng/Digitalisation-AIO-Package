@@ -80,6 +80,13 @@ Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. En
  - Import the `Dashboard Demo.json` from the `grafana-data/` directory into Grafana via Dashboards -> Import. 
  - Edit `Sensor 1` and `Sensor 2` panels. Select `grafana-postgresql-datasource` as the source.
 
+Note: Docker containers can reach out to each other via their container names; by default, they are
+ - NodeRed: `digitalisation-aio-package-nodered-1`
+ - PostgreSQL: `digitalisation-aio-package-postgres-1`
+ - Mosquitto: `digitalisation-aio-package-mosquitto-1`
+ - Grafana: `digitalisation-aio-package-grafana-1`
+ - OpenPLC Runtime: `digitalisation-aio-package-openplc-runtime-1`
+
 # [Optional] Updating Mosquitto's credentials (Again, you can skip this if you just want to give it a test drive)
 - Enter the Mosquitto container:
 ```bash
