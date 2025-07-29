@@ -31,11 +31,11 @@ The **Digitalisation AIO (All-In-One) Package** is a comprehensive Docker-based 
 ```bash
 git clone https://github.com/ctch3ng/Digitalisation-AIO-Package.git
 ```
-For Windows users, run the following.
+🚨 For *Windows* users, run the following.
 ```bash
 sudo chown -R 1000:1000 Digitalisation-AIO-Package/
 ```
-For Mac users, run the following instead.
+🚨 For *Mac* users, run the following instead.
 ```bash
 sudo chown -R 501:501 Digitalisation-AIO-Package/
 ```
