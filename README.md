@@ -39,6 +39,10 @@ sudo chown -R 1000:1000 Digitalisation-AIO-Package/
 ```bash
 sudo chown -R 501:501 Digitalisation-AIO-Package/
 ```
+🚨🚨 For some *Mac* users, if step 3 below ends up with permission issues, you may need to further run the following as well to provide adequate access rights.
+```bash
+sudo chmod -R 755 ~/Digitalisation-AIO-Package/
+```
 
 2. Configure the `.env` file with your preferred credentials. (You can skip this if you just want to give it a test drive)
 - Set your PostgreSQL password.
