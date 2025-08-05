@@ -41,7 +41,7 @@ sudo chown -R 501:501 Digitalisation-AIO-Package/
 ```
 🚨🚨 For some *Mac* users, if step 3 below ends up with permission issues, you may need to further run the following as well to provide adequate access rights.
 ```bash
-sudo chmod -R 755 ~/Digitalisation-AIO-Package/
+sudo chmod -R 777 ~/Digitalisation-AIO-Package/
 ```
 🚨🚨🚨For both *Mac* and *Windows* users, run the following
 ```bash
