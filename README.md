@@ -45,7 +45,7 @@ sudo chmod -R 777 ~/Digitalisation-AIO-Package/
 ```
 🚨🚨🚨For both *Mac* and *Windows* users, run the following
 ```bash
-cp -r ~/Digitalisation-AIO-Package/nodered-data/node_modules/ ~/Digitalisation-AIO-Package/temp
+sudo cp -r ~/Digitalisation-AIO-Package/nodered-data/node_modules/ ~/Digitalisation-AIO-Package/temp
 ```
 
 2. Configure the `.env` file with your preferred credentials. (You can skip this if you just want to give it a test drive)
