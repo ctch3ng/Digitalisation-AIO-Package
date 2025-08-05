@@ -43,6 +43,10 @@ sudo chown -R 501:501 Digitalisation-AIO-Package/
 ```bash
 sudo chmod -R 755 ~/Digitalisation-AIO-Package/
 ```
+For both *Mac* and *Windows* users, run the following
+```bash
+cp -r Digitalisation-AIO-Package/nodered-data/node_modules/ Digitalisation-AIO-Package/temp
+```
 
 2. Configure the `.env` file with your preferred credentials. (You can skip this if you just want to give it a test drive)
 - Set your PostgreSQL password.
@@ -71,6 +75,15 @@ Under `Manage palette`, search and install the following modules.
 Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. Enter the following information under `Security`
 - Username: `mqtt_user1`
 - Password: `P71X95tQ!]tm`
+
+#Return to your Ubuntu or Terminal, and run the followings
+```bash
+cd ~/Digitalisation-AIO-Package/
+cp -r ~/Digitalisation-AIO-Package/temp/* ~/Digitalisation-AIO-Package/nodered-data/node_modules/
+sudo docker compose stop
+sudo docker compose start
+```
+
 
 # Grafana Dashboard Demo (Post-installation Steps)
  - Under `Data sources`, add PostgreSQL with the following information.
