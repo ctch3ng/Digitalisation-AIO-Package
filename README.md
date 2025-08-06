@@ -43,7 +43,10 @@ sudo chown -R 501:501 Digitalisation-AIO-Package/
 ```bash
 sudo chmod -R 777 ~/Digitalisation-AIO-Package/
 ```
-🚨🚨🚨For both *Mac* and *Windows* users, run the following
+🚨🚨🚨For both *Mac* and *Windows* users, run the following.
+
+Rationale: In Node-Red, installing packages via the `Manage palette` could remove the customised DHT and Button emulators that come with this package. The following is to make a copy of them to the folder `Temp` such that we can re-apply them later when needed. 
+
 ```bash
 sudo cp -r ~/Digitalisation-AIO-Package/nodered-data/node_modules/ ~/Digitalisation-AIO-Package/temp
 ```
