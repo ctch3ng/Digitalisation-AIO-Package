@@ -32,12 +32,16 @@ The **Digitalisation AIO (All-In-One) Package** is a comprehensive Docker-based 
 git clone https://github.com/ctch3ng/Digitalisation-AIO-Package.git
 ```
 🚨 For *Windows* users, run the following.
+
 Rationale: On most Linux (Ubuntu included) systems, UID 1000 and GID 1000 typically refer to the first regular user account created and the primary group associated with the first non-system user account, respectively. You can use the command `id -u` and `id -g` to find your UID and GID.
+
 ```bash
 sudo chown -R 1000:1000 Digitalisation-AIO-Package/
 ```
 🚨 For *Mac* users, run the following instead.
-Rationale: On MacOS systems, UID 501 and GID 501 typically refer to the first regular user account created and the primary group associated with the first non-system user account, respectively.
+
+Rationale: On MacOS systems, UID 501 and GID 501 typically refer to the first regular user account created and the primary group associated with the first non-system user account, respectively. You can use the command `id -u` and `id -g` to find your UID and GID.
+
 ```bash
 sudo chown -R 501:501 Digitalisation-AIO-Package/
 ```
