@@ -85,7 +85,7 @@ Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. En
 - Username: `mqtt_user1`
 - Password: `P71X95tQ!]tm`
 
-Return to your Ubuntu or Terminal, and run the following to install the DHT and button emulators. In the future, if the emulators got removed due to the installation of other modules, you can run this again and reinstall them.
+🚨🚨Return to your Ubuntu or Terminal, and run the following to install the DHT and button emulators. In the future, if the emulators are removed due to the installation of other modules, you can run this again and reinstall them.
 
 ```bash
 cd ~/Digitalisation-AIO-Package/
