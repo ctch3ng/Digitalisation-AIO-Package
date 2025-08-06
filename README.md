@@ -47,7 +47,7 @@ sudo chown -R 501:20 Digitalisation-AIO-Package/
 ```
 🚨For both *Mac* and *Windows* users, run the following.
 
-Rationale: In Node-Red, installing packages via the `Manage palette` could remove the customised DHT and Button emulators that come with this package. The following is to make a copy of them to the folder `Temp` such that we can re-apply them later when needed. 
+Rationale: In Node-Red, installing packages via the `Manage palette` could remove the customised DHT and Button emulators that come with this package. The following is to make a copy of them to the folder `Temp`, such that we can reapply them later when needed. 
 
 ```bash
 sudo cp -r ~/Digitalisation-AIO-Package/nodered-data/node_modules/ ~/Digitalisation-AIO-Package/temp
@@ -85,7 +85,8 @@ Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. En
 - Username: `mqtt_user1`
 - Password: `P71X95tQ!]tm`
 
-Return to your Ubuntu or Terminal, and run the following to install the DHT and button emulators.
+Return to your Ubuntu or Terminal, and run the following to install the DHT and button emulators. In the future, if the emulators got removed due to the installation of other modules, you can run this again and reinstall them.
+
 ```bash
 cd ~/Digitalisation-AIO-Package/
 cp -r ~/Digitalisation-AIO-Package/temp/* ~/Digitalisation-AIO-Package/nodered-data/node_modules/
