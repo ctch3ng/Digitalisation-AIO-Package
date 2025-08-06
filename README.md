@@ -40,10 +40,10 @@ sudo chown -R 1000:1000 Digitalisation-AIO-Package/
 ```
 🚨 For *Mac* users, run the following instead.
 
-Rationale: On MacOS systems, UID 501 and GID 501 typically refer to the first regular user account created and the primary group associated with the first non-system user account, respectively. You can use the command `id -u` and `id -g` to find your UID and GID, respectively
+Rationale: On MacOS systems, UID 501 and GID 20 typically refer to the first regular user account created and the primary group associated with the first non-system user account, respectively. You can use the command `id -u` and `id -g` to find your UID and GID, respectively
 
 ```bash
-sudo chown -R 501:501 Digitalisation-AIO-Package/
+sudo chown -R 501:20 Digitalisation-AIO-Package/
 ```
 🚨For both *Mac* and *Windows* users, run the following.
 
