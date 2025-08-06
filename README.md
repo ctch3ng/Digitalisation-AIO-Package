@@ -23,8 +23,8 @@ The **Digitalisation AIO (All-In-One) Package** is a comprehensive Docker-based 
 ## Quick Start
 
 ### Prerequisites
-1. **Docker Desktop** with WSL2 (Ubuntu).
-2. Docker Desktop should be linked to your WSL2 instance.
+1. `Windows` users: **Docker Desktop** with WSL2 (Ubuntu). Docker Desktop should be linked (integrated) to your WSL2 instance.
+2. `Mac` users: **Docker Desktop** and Xcode installed.
 
 ### Setup Steps
 1. Clone this repository, and update ownership.
