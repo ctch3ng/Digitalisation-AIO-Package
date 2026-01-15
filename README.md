@@ -105,9 +105,10 @@ Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. En
 
 🚨🚨Return to your Ubuntu or Terminal, and run the following to install the DHT and button emulators. In the future, if the emulators are removed due to the installation of other modules, you can run this again and reinstall them.
 
+Assuming you are inside the directory (folder) `Digitalisation-AIO-Package`
+
 ```bash
-cd ./Digitalisation-AIO-Package/
-cp -r ./Digitalisation-AIO-Package/temp/* ./Digitalisation-AIO-Package/nodered-data/node_modules/
+cp -r ./temp/* ./nodered-data/node_modules/
 sudo docker compose stop
 sudo docker compose start
 ```
