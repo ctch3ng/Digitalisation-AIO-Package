@@ -68,7 +68,7 @@ sudo chown -R 501:20 Digitalisation-AIO-Package/
 Rationale: In Node-Red, installing packages via the `Manage palette` could remove the customised DHT and Button emulators that come with this package. The following is to make a copy of them to the folder `Temp`, such that we can reapply them later when needed. 
 
 ```bash
-sudo cp -r ~/Digitalisation-AIO-Package/nodered-data/node_modules/ ~/Digitalisation-AIO-Package/temp
+sudo cp -r ./Digitalisation-AIO-Package/nodered-data/node_modules/ ./Digitalisation-AIO-Package/temp
 ```
 
 2. Configure the `.env` file with your preferred credentials. (You can skip this if you just want to give it a test drive)
@@ -85,7 +85,7 @@ sudo docker compose up -d
 ```
 🚨 If step 3 above ends up with permission issues, you may need to further run the following as well to provide adequate access rights.
 ```bash
-sudo chmod -R 777 ~/Digitalisation-AIO-Package/
+sudo chmod -R 777 ./Digitalisation-AIO-Package/
 ```
 4. Access the services:
 - Node-RED: [http://localhost:1880](http://localhost:1880)
@@ -106,8 +106,8 @@ Under `Configuration nodes`, expand `digitalisation-aio-package-mosquitto-1`. En
 🚨🚨Return to your Ubuntu or Terminal, and run the following to install the DHT and button emulators. In the future, if the emulators are removed due to the installation of other modules, you can run this again and reinstall them.
 
 ```bash
-cd ~/Digitalisation-AIO-Package/
-cp -r ~/Digitalisation-AIO-Package/temp/* ~/Digitalisation-AIO-Package/nodered-data/node_modules/
+cd ./Digitalisation-AIO-Package/
+cp -r ./Digitalisation-AIO-Package/temp/* ./Digitalisation-AIO-Package/nodered-data/node_modules/
 sudo docker compose stop
 sudo docker compose start
 ```
