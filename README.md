@@ -2,6 +2,24 @@
 
 The **Digitalisation AIO (All-In-One) Package** is a comprehensive Docker-based stack that integrates tools for automation, data management, and visualisation. It is designed to facilitate efficient workflows, seamless communication, and insightful analysis.
 
+> ⚠️ **IMPORTANT:** This repository has two major versions with different OpenPLC implementations.
+
+| Version | OpenPLC Runtime | Control Method | Branch | Status |
+|---------|----------------|----------------|--------|--------|
+| **v2.x** | Runtime v4 (headless) | OpenPLC Editor via REST API | `main` | ✅ **Current** |
+| **v1.x** | Runtime v3 (web UI) | Web browser at :8080 | `v1` | 🔧 Maintenance |
+
+## 📋 Choose Your Version
+
+### Version 2.0 (Latest) - **Recommended for new installations**
+
+**Key Features:**
+- ✅ OpenPLC Runtime v4 (headless)
+- ✅ Controlled via OpenPLC Editor desktop application
+- ✅ REST API interface (port 8443)
+- ✅ No web interface - program upload via Editor only
+- ✅ Modern architecture
+
 ## Components
 - **Node-RED**: Automates workflows and orchestrates communication.
 - **PostgreSQL**: Manages and stores time-series data.
@@ -72,7 +90,7 @@ sudo chmod -R 777 ~/Digitalisation-AIO-Package/
 4. Access the services:
 - Node-RED: [http://localhost:1880](http://localhost:1880)
 - Grafana: [http://localhost:3000](http://localhost:3000)
-- OpenPLC Runtime: [http://localhost:8080](http://localhost:8080)
+- OpenPLC Runtime: Access via OpenPLC Editor desktop applicaiton. Download and install separately.
 
 # Node-RED Demo (Post-installation Steps)
 Under `Manage palette`, search and install the following modules.
