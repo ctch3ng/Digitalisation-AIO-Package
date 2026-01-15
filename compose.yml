@@ -55,13 +55,15 @@ services:
       - digi_pkg
       
   openplc-runtime:
-    image: ctch3ng/openplc-runtime:v3
+    image: ghcr.io/autonomy-logic/openplc-runtime:latest
+    container_name: digitalisation-aio-package-openplc-runtime-1
     ports:
-      - "8080:8080"
-      - "502:502"
+      - "8443:8443"
+    cap_add:
+      - SYS_NICE
+      - SYS_RESOURCE
+    volumes:
+      - './openplc-runtime-data:/var/run/runtime'
     restart: unless-stopped
     networks:
       - digi_pkg
-    privileged: true
-    stdin_open: true # Equivalent to -i
-    tty: true        # Equivalent to -t
