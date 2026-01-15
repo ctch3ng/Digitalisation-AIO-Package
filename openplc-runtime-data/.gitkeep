@@ -1,0 +1,2 @@
+# This directory is used by OpenPLC Runtime v4 for persistent data storage
+# Docker will mount this directory as a volume
